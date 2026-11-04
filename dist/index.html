@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Linlin Wu — PhD student in Computing at the University of Utah." />
+    <title>Linlin Wu | Academic Research</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#top">Linlin Wu<span>·</span>Research</a>
+        <nav aria-label="Main navigation">
+          <a href="#research">Research</a>
+          <a href="#background">Background</a>
+          <a class="contact-link" href="mailto:linlin.wu@utah.edu">Get in touch <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="intro-title">
+          <p class="eyebrow">University of Utah · School of Computing</p>
+          <h1 id="intro-title">Linlin Wu</h1>
+          <div class="hero-bottom">
+            <p class="hero-statement">I am a first-year PhD student in Computing, studying how the geometry of learned representations can make language models more interpretable and controllable.</p>
+            <a class="arrow-link" href="#research" aria-label="Explore research"><span>Explore research</span> <b aria-hidden="true">↓</b></a>
+          </div>
+          <div class="curve-art" aria-hidden="true">
+            <svg viewBox="0 0 930 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-32 207C117 215 124 23 267 58C397 89 365 240 536 191C691 146 675 17 969 48" stroke="currentColor" stroke-width="2.2"/>
+              <path d="M-29 225C153 243 124 65 283 92C422 115 408 215 552 211C678 207 735 75 952 99" stroke="currentColor" stroke-width="1" stroke-opacity=".34"/>
+              <circle cx="267" cy="58" r="6" fill="currentColor"/><circle cx="536" cy="191" r="6" fill="currentColor"/><circle cx="729" cy="88" r="6" fill="currentColor"/>
+            </svg>
+          </div>
+        </section>
+
+        <section id="research" class="research-section" aria-labelledby="research-title">
+          <div class="section-label"><span>01</span><h2 id="research-title">Research</h2></div>
+          <div class="research-grid">
+            <p class="large-copy">My current work sits at the intersection of <em>representation geometry</em>, <em>large language models</em>, and <em>AI alignment</em>.</p>
+            <div class="research-notes">
+              <p>I am interested in when the internal spaces of neural networks are curved, distorted, or otherwise resistant to simple linear descriptions—and what that means for reliably steering model behavior.</p>
+              <p class="mono-note">Current focus · geometry-aware intervention in LLMs</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="featured-paper" aria-labelledby="paper-title">
+          <div class="paper-topline"><span>Selected preprint</span><span>2026 · arXiv</span></div>
+          <div class="paper-layout">
+            <div class="paper-mark" aria-hidden="true"><span>∿</span></div>
+            <div>
+              <h2 id="paper-title">Curveball Steering: The Right Direction To Steer Isn’t Always Linear</h2>
+              <p class="authors">Shivam Raval<sup>*</sup>, Hae Jin Song, <strong>Linlin Wu<sup>*</sup></strong>, Abir Harrasse, Jeff M. Phillips, Fazl Barez, Amirali Abdullah <span class="equal-note"><sup>*</sup> Co-first authors</span></p>
+              <p class="paper-summary">We examine why linear steering directions can be unreliable in LLMs. By measuring geometric distortion in activation spaces, we motivate Curveball steering: a nonlinear method that operates in a polynomial-kernel feature space and better respects the model’s learned geometry.</p>
+              <a class="paper-link" href="https://arxiv.org/abs/2603.09313" target="_blank" rel="noreferrer">Read on arXiv <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="background" class="background-section" aria-labelledby="background-title">
+          <div class="section-label"><span>02</span><h2 id="background-title">Background</h2></div>
+          <div class="background-grid">
+            <p class="large-copy">Before Computing, I was trained as a mathematician—an education that still shapes how I think about structure, curvature, and learning systems.</p>
+            <div class="education-list">
+              <article>
+                <p class="year">2025 — present</p>
+                <h3>PhD in Computing</h3>
+                <p>University of Utah · Salt Lake City, UT</p>
+              </article>
+              <article>
+                <p class="year">2022 — 2025</p>
+                <h3>MS in Mathematics</h3>
+                <p>Northeast Normal University · Jilin, China</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="year"></span> Linlin Wu</p>
+        <a href="mailto:linlin.wu@utah.edu">linlin.wu@utah.edu</a>
+        <p>Salt Lake City, Utah</p>
+      </footer>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
