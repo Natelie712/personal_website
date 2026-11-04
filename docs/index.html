@@ -18,16 +18,32 @@
           <a href="#research">Research</a>
           <a href="#background">Background</a>
           <a class="contact-link" href="mailto:linlin.wu@utah.edu">Get in touch <span aria-hidden="true">↗</span></a>
+          <a class="uofu-mark" href="https://www.utah.edu/" target="_blank" rel="noreferrer" aria-label="University of Utah">
+            <img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="University of Utah" />
+          </a>
         </nav>
       </header>
 
       <main id="top">
         <section class="hero" aria-labelledby="intro-title">
-          <p class="eyebrow">University of Utah · School of Computing</p>
-          <h1 id="intro-title">Linlin Wu</h1>
-          <div class="hero-bottom">
-            <p class="hero-statement">I am a first-year PhD student in Computing, studying how the geometry of learned representations can make language models more interpretable and controllable.</p>
-            <a class="arrow-link" href="#research" aria-label="Explore research"><span>Explore research</span> <b aria-hidden="true">↓</b></a>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">University of Utah · School of Computing</p>
+              <h1 id="intro-title">Linlin<br />Wu</h1>
+              <div class="hero-bottom">
+                <p class="hero-statement">I am a first-year PhD student in Computing, studying how the geometry of learned representations can make language models more interpretable and controllable.</p>
+                <a class="arrow-link" href="#research" aria-label="Explore research"><span>Explore research</span> <b aria-hidden="true">↓</b></a>
+              </div>
+            </div>
+            <aside class="portrait-panel" aria-label="Portrait">
+              <div class="portrait-frame">
+                <img id="portrait-preview" alt="Portrait of Linlin Wu" hidden />
+                <div class="portrait-placeholder" id="portrait-placeholder" aria-hidden="true"><span class="portrait-initial">LW</span><span class="portrait-orbit orbit-one"></span><span class="portrait-orbit orbit-two"></span></div>
+                <label class="portrait-upload" for="portrait-upload">Add your photo <span aria-hidden="true">+</span></label>
+                <input id="portrait-upload" type="file" accept="image/png,image/jpeg,image/webp" />
+              </div>
+              <p>Portrait area<br /><span>Upload a JPG, PNG, or WebP</span></p>
+            </aside>
           </div>
           <div class="curve-art" aria-hidden="true">
             <svg viewBox="0 0 930 255" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,6 +104,18 @@
         <p>Salt Lake City, Utah</p>
       </footer>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const upload = document.getElementById('portrait-upload');
+      const preview = document.getElementById('portrait-preview');
+      const placeholder = document.getElementById('portrait-placeholder');
+      upload.addEventListener('change', () => {
+        const [file] = upload.files;
+        if (!file) return;
+        preview.src = URL.createObjectURL(file);
+        preview.hidden = false;
+        placeholder.hidden = true;
+      });
+    </script>
   </body>
 </html>
