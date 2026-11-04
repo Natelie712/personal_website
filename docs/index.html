@@ -27,9 +27,6 @@
         <aside class="portrait" aria-label="Portrait">
           <div class="portrait-frame">
             <img id="portrait-preview" src="profile.jpg" alt="Portrait of Linlin Wu" />
-            <div class="portrait-placeholder" id="portrait-placeholder" aria-hidden="true">LW</div>
-            <label class="photo-upload" for="portrait-upload" aria-label="Upload a portrait"><span>+</span></label>
-            <input id="portrait-upload" type="file" accept="image/png,image/jpeg,image/webp" />
           </div>
         </aside>
       </section>
@@ -62,10 +59,6 @@
     </main>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-      const upload = document.getElementById('portrait-upload');
-      const preview = document.getElementById('portrait-preview');
-      const placeholder = document.getElementById('portrait-placeholder');
-      upload.addEventListener('change', () => { const [file] = upload.files; if (!file) return; preview.src = URL.createObjectURL(file); preview.hidden = false; placeholder.hidden = true; });
     </script>
   </body>
 </html>
